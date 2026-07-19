@@ -1,74 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Litay Weather Map</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Geográfico Profesional</title>
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
-
-
 <body>
+  <header>
+    <h1>🌍 Localizador Geográfico Global 🌦️</h1>
+    <p>
+      Consumo de API OpenStreetMap con control de versiones integral.
+      <br>
+      Por Litay Tapia Colin - Grupo IRIC93
+    </p>
+  </header>
 
+  <main>
+    <!-- Buscador -->
+    <div class="search-container">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Introduce un lugar (Ej. Lerma, Toluca, Madrid...)">
+      <button id="search-btn">
+        Consultar API
+      </button>
+    </div>
 
-<header>
+    <!-- Información -->
+    <div id="weather-card" class="weather-card">
+      <p>
+        Introduce una ubicación para desplegar la información geográfica y climatológica.
+      </p>
+    </div>
 
-<h1>🌸 Litay Weather Map</h1>
+    <!-- Mapa -->
+    <div id="map"></div>
+  </main>
 
-<p>
-Aplicación Web de Mapa Meteorológico Integral
-</p>
-
-</header>
-
-
-<section>
-
-<input 
-placeholder="Buscar ciudad">
-
-
-<button>
-Buscar
-</button>
-
-</section>
-
-
-<div class="card">
-
-<h2>Clima actual</h2>
-
-<p>Temperatura: --</p>
-
-<p>Humedad: --</p>
-
-<p>Viento: --</p>
-
-</div>
-
-
-<div id="map">
-
-Mapa meteorológico
-
-</div>
-
-
-<footer>
-
-Proyecto realizado por Litay
-
-</footer>
-
-
-<script src="js/app.js"></script>
-
-
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- JavaScript -->
+  <script src="app.js"></script>
 </body>
-
 </html>
